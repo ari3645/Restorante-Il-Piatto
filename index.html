@@ -9,16 +9,13 @@ $pass = "Ari36.45";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    // Récupère les données du formulaire
     $login = filter_input(INPUT_POST, 'login');
     $password = filter_input(INPUT_POST, 'password');
 
     try {
-        // Connexion à la base de données
         $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
         $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // On vérifie si le login existe déjà et si le mot de passe correspond
         $sql = $dbco->prepare("SELECT * FROM utilisateur WHERE Nom_utilisateur = :login AND mot_de_passe = :password");
         $sql->bindParam('login', $login);
         $sql->bindParam('password', $password);
@@ -26,18 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $row = $sql->fetch(PDO::FETCH_ASSOC);
 
         if ($row) {
-            // Utilisateur trouvé, affichage du message de succès
+
             $_SESSION['success_message'] = "Connexion réussie. Bienvenue, " . $login . "!";
             header("Location: success.php"); // Redirection vers une page de succès
             exit();
         } else {
-            // Aucune correspondance trouvée
+
             $_SESSION['error_message'] = "Nom d'utilisateur ou mot de passe incorrect.";
             header("Location: index.php"); // Redirection vers la page de connexion
             exit();
         }
 
-    // Gestion des erreurs de connexion
     } catch (PDOException $e) {
         $_SESSION['error_message'] = "Une erreur s'est produite lors de la connexion à la base de données.";
         header("Location: index.php");
