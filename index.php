@@ -31,6 +31,7 @@ try {
 </head>
 <body>
     <h1>Welcome to My Azure Website</h1>
+    <p>Here you can find some information about our services.</p>
 
     <div class="left">
         <form method="POST" action="add_ndf.php" enctype="multipart/form-data"> 
