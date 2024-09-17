@@ -23,19 +23,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Stocker le message de succès dans la session
             $_SESSION['success_message'] = $row['Idproduit'];
             // Redirection vers la même page pour afficher le message
-            header("Location: index.php");
+            //header("Location: index.php");
             exit();
         } else {
             // Stocker le message d'erreur dans la session
             $_SESSION['error_message'] = "Requete mauvaise.";
-            header("Location: index.php");
+            //header("Location: index.php");
             exit();
         }
 
     } catch (PDOException $e) {
         // Stocker le message d'erreur en cas d'échec de connexion à la base de données
         $_SESSION['error_message'] = "Une erreur s'est produite lors de la connexion à la base de données.";
-        header("Location: index.php");
+        //header("Location: index.php");
         exit();
     }
 }
@@ -58,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     session_start();
     if (isset($_SESSION['success_message'])) {
         echo '<p style="color:green;">' . $_SESSION['success_message'] . '</p>';
-        unset($_SESSION['success_message']); // Supprimer le message après l'affichage
+        //unset($_SESSION['success_message']); // Supprimer le message après l'affichage
     }
     if (isset($_SESSION['error_message'])) {
         echo '<p style="color:red;">' . $_SESSION['error_message'] . '</p>';
-        unset($_SESSION['error_message']); // Supprimer le message après l'affichage
+        //unset($_SESSION['error_message']); // Supprimer le message après l'affichage
     }
 
     echo "<p>hello world</p>";
