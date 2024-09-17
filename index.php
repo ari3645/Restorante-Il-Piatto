@@ -16,9 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
         $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $dbco->prepare("SELECT * FROM utilisateur WHERE Nom_utilisateur = :login AND mot_de_passe = :password");
-        $sql->bindParam('login', $login);
-        $sql->bindParam('password', $password);
+        $sql = $dbco->prepare("SELECT * FROM produit");
         $sql->execute();
         $row = $sql->fetch(PDO::FETCH_ASSOC);
 
