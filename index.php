@@ -36,7 +36,7 @@ try {
     <div class="left">
         <form method="POST" action="add_reservation.php" enctype="multipart/form-data"> 
             <h3><center>Réserver une table</center></h3>
-            <p>Date : </p><input type="text" name="Date">
+            <p>Date et Heure :</p> <input type="datetime-local" name="datetime" required>
             <p>Nom : </p><input type="text" name="nom">
             <p>Prénom : </p><input type="text" name="Prenom">
             <p>Adresse Mail : </p><input type="text" name="mail">
