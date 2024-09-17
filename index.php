@@ -34,16 +34,14 @@ try {
     <p>Here you can find some information about our services.</p>
 
     <div class="left">
-        <form method="POST" action="add_ndf.php" enctype="multipart/form-data"> 
-            <h3><center>Ajouter note de frais</center></h3>
-            <center><hr></center>
-            <p style="margin-top:13.5px;">Intitulé : </p><input type="text" name="intitule" >
-            <p>Date : </p><input type="text" name="date">
-            <p>Montant : </p><input type="number" name="montant">
-            <p>Lieu : </p><input type="text" name="lieu">
-            <p>Id Frais : </p><input type="number" name="id_frais">
-            <center><p>Ajouter une image : </p><input type="file" name="image" style="padding-left:25%; background-color: transparent;"></center>
-            <center><button class="bn1" type="submit">Ajouter</button></center>
+        <form method="POST" action="add_reservation.php" enctype="multipart/form-data"> 
+            <h3><center>Réserver une table</center></h3>
+            <p>Date : </p><input type="text" name="Date">
+            <p>Nom : </p><input type="text" name="nom">
+            <p>Prénom : </p><input type="text" name="Prenom">
+            <p>Adresse Mail : </p><input type="text" name="mail">
+            <p>Nombre de personnes : </p><input type="number" name="nb">
+            <center><button class="bn1" type="submit">Réserver</button></center>
             
             <?php
             // Vérifier si un message de succès est défini dans la session
