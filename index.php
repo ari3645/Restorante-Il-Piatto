@@ -13,7 +13,7 @@ try {
     $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Afficher un message de succès si la connexion est réussie
-    echo "Connexion réussie à la base de données.";
+    //echo "Connexion réussie à la base de données.";
 } catch (PDOException $e) {
     // En cas d'erreur de connexion, afficher un message d'erreur
     echo "Erreur de connexion : " . $e->getMessage();
