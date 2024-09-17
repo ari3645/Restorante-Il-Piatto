@@ -8,6 +8,8 @@ $user = "ilpiatto";
 $pass = "Ari36.45";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    echo "test";
     try {
         $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
         $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -16,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $sql->execute();
         $row = $sql->fetch(PDO::FETCH_ASSOC);
 
-
+        echo "row";
         if ($row) {
             // Stocker le message de succès dans la session
             $_SESSION['success_message'] = $row['Idproduit'];
