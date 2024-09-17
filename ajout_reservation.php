@@ -22,11 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Préparer la requête d'insertion
         $sql = $dbco->prepare("INSERT INTO reservation (datetime, nom, prenom, mail, nb_personnes) VALUES (:datetime, :nom, :prenom, :mail, :nb)");
-        $sql->bindParam(':datetime', $datetime);
+        $sql->bindParam(':horaire_date', $datetime);
         $sql->bindParam(':nom', $nom);
         $sql->bindParam(':prenom', $prenom);
         $sql->bindParam(':mail', $mail);
-        $sql->bindParam(':nb', $nb);
+        $sql->bindParam(':nombre_personnes', $nb);
 
         // Exécuter la requête
         $sql->execute();
