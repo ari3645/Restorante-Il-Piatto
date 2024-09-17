@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Préparer la requête d'insertion
-        $sql = $dbco->prepare("INSERT INTO reservation (datetime, nom, prenom, mail, nb_personnes) VALUES (:datetime, :nom, :prenom, :mail, :nb)");
+        $sql = $dbco->prepare("INSERT INTO reservation (Horaire_date, nom, prenom, mail, nombre_personnes) VALUES (:horaire_date, :nom, :prenom, :mail, :nombre_personnes)");
         $sql->bindParam(':horaire_date', $datetime);
         $sql->bindParam(':nom', $nom);
         $sql->bindParam(':prenom', $prenom);
