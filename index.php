@@ -20,7 +20,6 @@ try {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +33,7 @@ try {
     <p>Here you can find some information about our services.</p>
 
     <div class="left">
-        <form method="POST" action="" enctype="multipart/form-data"> 
+        <form method="POST" action="ajout_reservation.php" enctype="multipart/form-data"> 
             <h3><center>Réserver une table</center></h3>
             <p>Date et Heure :</p> <input type="datetime-local" name="datetime" required>
             <p>Nom : </p><input type="text" name="nom" required>
@@ -45,15 +44,14 @@ try {
             
             <?php
             // Vérifier si un message de succès est défini dans la session
-            if (isset($_SESSION['ajout_ndf'])) {
+            if (isset($_SESSION['ajout_reservation'])) {
                 // Afficher le message de succès
-                echo "<p>" . $_SESSION['ajout_ndf'] . "</p>";
+                echo "<p>" . $_SESSION['ajout_reservation'] . "</p>";
                 // Supprimer le message de la session pour qu'il ne s'affiche plus après un rafraîchissement de la page
-                unset($_SESSION['ajout_ndf']);
+                unset($_SESSION['ajout_reservation']);
             }
             ?>
         </form>
       </div>
-
 </body>
 </html>
