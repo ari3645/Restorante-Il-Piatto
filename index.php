@@ -34,13 +34,13 @@ try {
     <p>Here you can find some information about our services.</p>
 
     <div class="left">
-        <form method="POST" action="add_reservation.php" enctype="multipart/form-data"> 
+        <form method="POST" action="" enctype="multipart/form-data"> 
             <h3><center>Réserver une table</center></h3>
             <p>Date et Heure :</p> <input type="datetime-local" name="datetime" required>
-            <p>Nom : </p><input type="text" name="nom">
-            <p>Prénom : </p><input type="text" name="Prenom">
-            <p>Adresse Mail : </p><input type="text" name="mail">
-            <p>Nombre de personnes : </p><input type="number" name="nb">
+            <p>Nom : </p><input type="text" name="nom" required>
+            <p>Prénom : </p><input type="text" name="Prenom" required>
+            <p>Adresse Mail : </p><input type="text" name="mail" required>
+            <p>Nombre de personnes : </p><input type="number" name="nb" required>
             <center><button class="bn1" type="submit">Réserver</button></center>
             
             <?php
