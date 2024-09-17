@@ -23,18 +23,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $row = $sql->fetch(PDO::FETCH_ASSOC);
 
         if ($row) {
-
+            // Stocker le message de succès dans la session
             $_SESSION['success_message'] = "Connexion réussie. Bienvenue, " . $login . "!";
-            header("Location: success.php"); // Redirection vers une page de succès
+            // Redirection vers la même page pour afficher le message
+            header("Location: index.php");
             exit();
         } else {
-
+            // Stocker le message d'erreur dans la session
             $_SESSION['error_message'] = "Nom d'utilisateur ou mot de passe incorrect.";
-            header("Location: index.php"); // Redirection vers la page de connexion
+            header("Location: index.php");
             exit();
         }
 
     } catch (PDOException $e) {
+        // Stocker le message d'erreur en cas d'échec de connexion à la base de données
         $_SESSION['error_message'] = "Une erreur s'est produite lors de la connexion à la base de données.";
         header("Location: index.php");
         exit();
