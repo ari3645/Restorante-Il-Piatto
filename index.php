@@ -8,10 +8,6 @@ $user = "ilpiatto";
 $pass = "Ari36.45";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-    $login = filter_input(INPUT_POST, 'login');
-    $password = filter_input(INPUT_POST, 'password');
-
     try {
         $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
         $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -20,15 +16,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $sql->execute();
         $row = $sql->fetch(PDO::FETCH_ASSOC);
 
+
+        echo $row['idproduit'] . "<br>";
+        echo" <p>hello world</p>";
+
+
         if ($row) {
             // Stocker le message de succès dans la session
-            $_SESSION['success_message'] = "Connexion réussie. Bienvenue, " . $login . "!";
+            $_SESSION['success_message'] = "Requete réussie";
             // Redirection vers la même page pour afficher le message
             header("Location: index.php");
             exit();
         } else {
             // Stocker le message d'erreur dans la session
-            $_SESSION['error_message'] = "Nom d'utilisateur ou mot de passe incorrect.";
+            $_SESSION['error_message'] = "Requete mauvaise.";
             header("Location: index.php");
             exit();
         }
