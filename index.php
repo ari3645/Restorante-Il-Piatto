@@ -28,17 +28,16 @@ try {
 </head>
 <body>
     <h1>Welcome to My Azure Website</h1>
-    <p>Here you can find some information about our services.</p>
 
     <div class="left">
         <form method="POST" action="ajout_reservation.php" enctype="multipart/form-data"> 
-            <h3><center>Réserver une table</center></h3>
+            <h3>Réserver une table</h3>
             <p>Date et Heure :</p> <input type="datetime-local" name="datetime" required>
             <p>Nom : </p><input type="text" name="nom" required>
             <p>Prénom : </p><input type="text" name="Prenom" required>
             <p>Adresse Mail : </p><input type="text" name="mail" required>
             <p>Nombre de personnes : </p><input type="number" name="nb" required>
-            <center><button class="bn1" type="submit">Réserver</button></center>
+            <button class="bn1" type="submit">Réserver</button>
             
             <?php
             // Vérifier si un message de succès est défini dans la session
