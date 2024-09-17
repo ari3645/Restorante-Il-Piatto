@@ -17,13 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $row = $sql->fetch(PDO::FETCH_ASSOC);
 
 
-        echo $row['idproduit'] . "<br>";
-        echo" <p>hello world</p>";
-
-
         if ($row) {
             // Stocker le message de succès dans la session
-            $_SESSION['success_message'] = "Requete réussie";
+            $_SESSION['success_message'] = $row['Idproduit'];
             // Redirection vers la même page pour afficher le message
             header("Location: index.php");
             exit();
@@ -68,6 +64,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     echo "<p>hello world</p>";
+    echo $_SESSION['success_message'] . "test1";
+    echo $_SESSION['error_message'] . "test2";
+
     ?>
 
     <div class="left">
