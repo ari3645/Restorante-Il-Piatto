@@ -67,9 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo '<p style="color:red;">' . $_SESSION['error_message'] . '</p>';
         unset($_SESSION['error_message']); // Supprimer le message après l'affichage
     }
-    ?>
 
-    <script src="script.js"></script>
+    echo "<p>hello world</p>";
+    ?>
 
     <div class="left">
         <form method="POST" action="add_ndf.php" enctype="multipart/form-data"> 
