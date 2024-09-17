@@ -1,28 +1,22 @@
 <?php
+session_start();
+
 // Informations d'identification
 $serveur = "restaurant-il-piatto2.mysql.database.azure.com";
 $dbname = "restaurantilpiatto";
 $user = "ilpiatto";
 $pass = "Ari36.45";
 
-// Chemin vers les certificats SSL (selon la configuration Azure ou MySQL)
-$ssl_ca = 'DigiCertGlobalRootCA.crt.pem'; // Certificat CA, spécifique à votre fournisseur
-
 try {
-    // Options SSL pour sécuriser la connexion
-    $options = [
-        PDO::MYSQL_ATTR_SSL_CA => $ssl_ca
-    ];
-
-    // Connexion à la base de données avec options SSL
-    $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass, $options);
+    // Connexion à la base de données sans SSL
+    $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
     $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Si la connexion est réussie
-    echo "Connexion sécurisée réussie à la base de données.";
+    // Afficher un message de succès si la connexion est réussie
+    echo "Connexion réussie à la base de données.";
 } catch (PDOException $e) {
     // En cas d'erreur de connexion, afficher un message d'erreur
-    echo "Erreur de connexion sécurisée : " . $e->getMessage();
+    echo "Erreur de connexion : " . $e->getMessage();
 }
 ?>
 
