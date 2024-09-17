@@ -29,7 +29,6 @@ try {
 </head>
 <body>
     <h1>Welcome to My Azure Website</h1>
-    <p>This is a sample website hosted on Azure.</p>
 
     <div class="left">
         <form method="POST" action="add_ndf.php" enctype="multipart/form-data"> 
