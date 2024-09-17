@@ -42,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +53,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <h1>Welcome to My Azure Website</h1>
     <p>This is a sample website hosted on Azure.</p>
+
+    <!-- Afficher le message de succès ou d'erreur -->
+    <?php
+    session_start();
+    if (isset($_SESSION['success_message'])) {
+        echo '<p style="color:green;">' . $_SESSION['success_message'] . '</p>';
+        unset($_SESSION['success_message']); // Supprimer le message après l'affichage
+    }
+    if (isset($_SESSION['error_message'])) {
+        echo '<p style="color:red;">' . $_SESSION['error_message'] . '</p>';
+        unset($_SESSION['error_message']); // Supprimer le message après l'affichage
+    }
+    ?>
+
     <script src="script.js"></script>
 
     <div class="left">
@@ -67,13 +80,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <p>Id Frais : </p><input type="number" name="id_frais">
             <center><p>Ajouter une image : </p><input type="file" name="image" style="padding-left:25%; background-color: transparent;"></center>
             <center><button class="bn1" type="submit">Ajouter</button></center>
+            
             <?php
-              // Vérifier si un message de succès est défini dans la session
-              if (isset($_SESSION['ajout_ndf'])) {
+            // Vérifier si un message de succès est défini dans la session
+            if (isset($_SESSION['ajout_ndf'])) {
                 // Afficher le message de succès
                 echo "<p>" . $_SESSION['ajout_ndf'] . "</p>";
                 // Supprimer le message de la session pour qu'il ne s'affiche plus après un rafraîchissement de la page
-                unset($_SESSION['ajout_ndf']);}
+                unset($_SESSION['ajout_ndf']);
+            }
             ?>
         </form>
       </div>
