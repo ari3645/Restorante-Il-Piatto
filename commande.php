@@ -13,7 +13,7 @@
     <nav class="navbar bg-body-tertiary row">
         <div class="col-md-4">
             <form class="container-fluid ">
-                <button class="button-back " type="button"> <strong> < Retour </strong></button>
+                <button class="button-back " type="button" onclick="window.location.href='index.php';"> <strong> < Retour </strong></button>
           
             </form>
         </div>
