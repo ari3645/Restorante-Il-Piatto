@@ -1,0 +1,52 @@
+/*FONTS*/
+.yeseva-one-regular {
+    font-family: "Yeseva One", serif;
+    font-weight: 700;
+    font-style: normal;
+    /*text-shadow: rgb(62, 62, 62) 1px 0 10px;*/
+}
+
+body {
+    background: #CB0C0C !important;
+}
+
+.navbar{
+    flex-direction: row;
+    height: 80px;
+    position: fixed;
+}
+
+.nom {
+    font-size: 200%;
+    margin-right: 40px;
+}
+
+.button-back{
+    background-color: transparent;
+    color: #CB0C0C;
+    border: 2px solid #CB0C0C;
+    transition: 0.5s;
+    height: 40px;
+    width: 100px;
+    border-radius:10px;
+    margin-left: 15px;
+    position: relative;
+}
+
+.button-back:hover{
+    background-color: #CB0C0C;
+    border: 2px solid #CB0C0C;
+    transition: 0.5s;
+    color: #ffffff;
+
+}
+
+.zonemenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 70%;
+}
