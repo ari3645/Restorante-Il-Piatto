@@ -1,0 +1,47 @@
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(31, 31, 31, 0)), url(images/background3.png);
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+    color: aliceblue;
+    width: 99.5%;
+    height: 1200px;
+    max-height: 50vw;
+  
+}
+
+
+.button-back-acceuil{
+    background-color: transparent;
+    color: #CB0C0C;
+    border: 2px solid #CB0C0C;
+    transition: 0.5s;
+    height: 50px;
+    width: 150px;
+    border-radius:10px;
+    margin-left: 15px;
+    position: relative;
+    top: -15px;
+}
+
+.button-back-acceuil:hover{
+    background-color: #CB0C0C;
+    border: 2px solid #CB0C0C;
+    transition: 0.5s;
+    color: #ffffff;
+    
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    right: -5px;
+    top: -10px;
+
+}
+
+nav{
+    width: 101%;
+}
