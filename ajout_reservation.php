@@ -33,13 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Message de succès
         $_SESSION['ajout_reservation'] = "Réservation réussie. Merci de votre réservation !";
-        header("Location: index.php"); // Redirection vers la page de réservation
+        header("Location: reservation.php"); // Redirection vers la page de réservation
         exit();
 
     } catch (PDOException $e) {
         // Message d'erreur
         $_SESSION['ajout_reservation'] = "Erreur lors de la réservation : " . $e->getMessage();
-        header("Location: index.php"); // Redirection vers la page de réservation
+        header("Location: reservation.php"); // Redirection vers la page de réservation
         exit();
     }
 }
