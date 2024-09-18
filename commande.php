@@ -13,7 +13,7 @@
     <nav class="navbar bg-body-tertiary row">
         <div class="col-md-4">
             <form class="container-fluid ">
-                <button class="button-back " type="button" onclick="window.location.href='index.php';"> <strong> < Retour </strong></button>
+                <button class="button-back " type="button"> <strong> < Retour </strong></button>
           
             </form>
         </div>
@@ -313,13 +313,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn2.addEventListener('click', () => {
@@ -331,13 +340,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn3.addEventListener('click', () => {
@@ -349,13 +367,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn4.addEventListener('click', () => {
@@ -367,13 +394,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn5.addEventListener('click', () => {
@@ -385,13 +421,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn6.addEventListener('click', () => {
@@ -403,13 +448,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn7.addEventListener('click', () => {
@@ -421,13 +475,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn8.addEventListener('click', () => {
@@ -439,13 +502,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn9.addEventListener('click', () => {
@@ -457,13 +529,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn10.addEventListener('click', () => {
@@ -475,13 +556,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn11.addEventListener('click', () => {
@@ -493,13 +583,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn12.addEventListener('click', () => {
@@ -511,13 +610,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn13.addEventListener('click', () => {
@@ -529,13 +637,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn14.addEventListener('click', () => {
@@ -547,13 +664,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn15.addEventListener('click', () => {
@@ -565,13 +691,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn16.addEventListener('click', () => {
@@ -583,13 +718,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
 
         btn17.addEventListener('click', () => {
@@ -601,13 +745,22 @@
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${nomPlat}</td>
-                <td style="width: 50%;"></td>
+                <td style="width: 30%;"></td>
                 <td>${prixPlat.toFixed(2)} €</td>
+                <td style="width: 5%;"></td>
+                <td><button class="remove-btn">Supprimer</button></td>
             `;
             panier.appendChild(row);
 
             totalPrice += prixPlat;
             document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                const rowPrice = parseFloat(row.children[2].innerText.replace('€', '').trim());
+                panier.removeChild(row);
+                totalPrice -= rowPrice;
+                document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+            });
         });
     });
 

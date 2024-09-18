@@ -41,6 +41,20 @@ body{
 
 }
 
+.remove-btn{
+    background-color: transparent;
+    color: #CB0C0C;
+    border: 2px solid #CB0C0C;
+    transition: 0.5s;
+    height: 35px;
+    width: 100px;
+    border-radius:10px;
+    margin-left: 15px;
+    position: relative;
+    top: 0vw;
+    left: 35%;
+}
+
 .navbar{
     flex-direction: row;
     height: 80px;
