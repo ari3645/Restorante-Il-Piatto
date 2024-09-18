@@ -19,7 +19,7 @@
         </div>
       </nav>
     <center><h1 style="margin-top: 10%; color:aliceblue;" >VOTRE COMMANDE A ETE EFFECTUEE</h1></center>
-    <center><button class="button-back-acceuil " type="button" style="margin-top: 20%;"> <strong> Retour à l'acceuil </strong></button></center>
+    <center><button class="button-back-acceuil " type="button" style="margin-top: 20%;" onclick="window.location.href='index.php';"> <strong> Retour à l'acceuil </strong></button></center>
 
 </body>
 </html>

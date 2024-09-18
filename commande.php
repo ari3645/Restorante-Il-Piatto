@@ -236,7 +236,7 @@
                 <hr>
                 <p class="  total">Total : <span id="totalPrice">0 </span>€</p>
                 <span id="total-prix"></span>
-                <button class="button-payer " id="button-payer" type="button" style="margin-top: 15px;"> <strong> Payer </strong></button>
+                <button class="button-payer " id="button-payer" type="button" style="margin-top: 15px;" onclick="window.location.href='paiement.php';"> <strong> Payer </strong></button>
 
             </div>
    
