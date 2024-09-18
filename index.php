@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="zonemenu">
-                    <button class="btn btn-menu" onclick="window.location.href='menu.html';">Accéder au menu</button>
+                    <button class="btn btn-menu" onclick="window.location.href='menu.php';">Accéder au menu</button>
                 </div>
                     
                 <div class="row zonetexte2">
