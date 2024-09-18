@@ -1,0 +1,120 @@
+/*FONTS*/
+.yeseva-one-regular {
+    font-family: "Yeseva One", serif;
+    font-weight: 700;
+    font-style: normal;
+    /*text-shadow: rgb(62, 62, 62) 1px 0 10px;*/
+}
+
+.instrument-serif-regular-italic {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+body{
+  background-color: #CB0C0C !important;
+}
+
+.navbar{
+    flex-direction: row;
+    height: 80px;
+    position: fixed;
+}
+
+.btn {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    font-weight: 700 !important;
+    color: white !important;
+    border: none;
+    padding-left : 20px !important;
+    padding-right: 20px !important;
+}
+
+.btn-nav {
+    background-color: #CB0C0C !important;
+}
+
+.nom {
+    font-size: 200%;
+    margin-left: 40px;
+}
+
+.zoneboutons {
+    display: flex; 
+    margin-right: 40px;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.container-fluid{
+    padding-top: 20px;
+}
+
+.nuage1 {
+    display: block;
+    width: 100%;
+}
+
+.zone2 {
+    position: absolute; /* Positionne le texte par-dessus l'image */
+    top: 50%; /* Ajustez pour centrer verticalement */
+    left: 50%; /* Ajustez pour centrer horizontalement */
+    transform: translate(-50%, -50%); /* Centre le texte */
+    color: rgb(0, 0, 0); /* Couleur du texte, changez selon les besoins */
+    font-size: 20px; /* Taille de la police, changez selon les besoins */
+    text-align: center; /* Centre le texte à l'intérieur de l'élément */
+}
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.card {
+    min-width: 20%;
+    flex: 0 0 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.80) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: black;
+    font-weight: 900;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-btn{
+    left: -15px;
+}
+.next-btn {
+    right: -15px;
+}
+
+.zonemenu {
+    display: flex;
+}
+
+.btn-menu {
+    background-color: #2ECA50 !important;
+}
