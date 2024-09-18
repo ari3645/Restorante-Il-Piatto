@@ -21,6 +21,7 @@ body{
     flex-direction: row;
     height: 80px;
     position: fixed;
+    margin-bottom: 600px;
 }
 
 .btn {
@@ -56,13 +57,8 @@ body{
     gap: 20px;
 }
 
-.titre1 {
-    margin-top: 570px;
-    margin-left: 115px;
-}
-
 .slider-container {
-    width: 100%;
+    width: 90%;
     overflow: hidden;
     margin: 0 auto;
     margin-top: 150px;
@@ -76,10 +72,9 @@ body{
 }
 
 .card {
-    min-width: 20%;
     flex: 0 0 20%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 8px;
     background: none !important;
     backdrop-filter: blur(20px) !important;
     border: none !important;
@@ -126,27 +121,64 @@ body{
     /*padding-left: 200px;
     padding-right: 200px;*/
     text-align: center;
+    color: #2ECA50;
 }
 
 .zonetexte2 .card {
+    margin: 20px;
+    background-color: #2ECA50 !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.zonetexte2 .card .clock {
+    width: 50px;
+    margin-top: 5px;
+}
+.zonetexte2 .card .titre2 {
+    background-color: #49e66b;
+}
+
+.zonetexte2 .card h4 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.end {
+    justify-content: end;
+}
+
 .zoneboutons2 {
-    margin: 50px;
+    margin: 80px;
+    margin-bottom: 200px;
     justify-content: center;
     gap: 200px;
 }
 
+.titreplanning {
+    margin-top: 50px;
+}
+
+.zoneplanning .card {
+    background: rgba(255, 255, 255, 0.80) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 90px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
 .zoneevenements {
     display: grid;
-    margin: 50px;
+    margin: 80px;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .zoneevenements .card {
+    background-color: #2ECA50 !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.zoneevenements .card .titre2 {
+    background-color: #2bb649;
 }
 
 .titre2 {

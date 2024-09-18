@@ -18,11 +18,9 @@
                 <button class="btn btn-nav reserver" onclick="window.location.href='reservation.php';">Réserver</button>
                 <button class="btn btn-nav commander" onclick="window.location.href='commande.php';">Commander</button>
             </div>
-
     </nav>
 
     <div class="container">
-        <h1 class="titre1">Nos<br>incontournables</h1>
                 <div class="slider-container">
                     <button id="prev" class="prev-btn"><</button>
                     <div class="slider">
@@ -34,19 +32,19 @@
                             <img src="Image/Carbonara.png">
                             Nos pâtes
                         </div>
-                        <div class="card">
+                        <div class="card plats">
                             <img src="Image/Tiramisu.png">
                             Nos desserts
                         </div>
-                        <div class="card">
+                        <div class="card plats">
                             <img src="Image/Café.png">
                             Nos digestifs
                         </div>
-                        <div class="card">
+                        <div class="card plats">
                             <img src="Image/Lasagna.png">
                             Nos plats
                         </div>
-                        <div class="card">
+                        <div class="card plats">
                             <img src="Image/Salade.png">
                             Nos salades
                         </div>
@@ -55,31 +53,50 @@
                 </div>
 
                 <div class="zonemenu">
-                    <button class="btn btn-menu">Accéder au menu</button>
+                    <button class="btn btn-menu" onclick="window.location.href='menu.html';">Accéder au menu</button>
                 </div>
                     
                 <div class="row zonetexte2">
                     <div class="col-md-1"></div>
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="zonetexte">
                             <p>
                                 Il Piatto est un petit restaurant familial dont la production est perpétuée de génération en génération depuis 1968.
                                 Nous sommes implantés à Lyon, au 53 cours Albert Thomas.
-                                <br>Notre établissement propose des spécialités culinaires originaires d’Italie.
+                                <br><br>Notre établissement propose des spécialités culinaires originaires d’Italie.
                                 A partir de 23h, nous proposons également, une fois par semaine des évènements à thèmes, au sein du restaurant.
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-2"></div>
+                    <div class="col-md-1"></div>
                     <div class="col-md-4">
                         <div class="card">
-                            <div class="titre2">
-                                <h2>Halloween</h2>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="titre2">
+                                        <div class="row">
+                                            <img src="Image/clock.png" class="clock">
+                                            <h3 class="end">Nos horaires</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4>Lundi au samedi :</h4>
+                                        <p>11h à 15h</p>
+                                        <p>18h à 23h</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Dimanche :</h4>
+                                        <p>11h à 15h</p>
+                                        <p>Fermé le soir</p>
+                                    </div>
                             </div>
-                            <h3>31 octobre</h3>
-                            <p>Soirée échange de friandises + déguisements exigés</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-1"></div>
                 </div>
 
                 <div class="zonehoraires">
@@ -93,48 +110,48 @@
 
                 <div class="zoneplanning">
                     <div class="card">
-                        <h1>Notre planning</h1>
+                        <h1 class="titreplanning instrument-serif-regular-italic">Notre planning</h1>
                         <div class="zoneevenements">
                             <div class="card">
                                 <div class="titre2">
-                                    <h2>Halloween</h2>
+                                    <h3>Halloween</h3>
                                 </div>
-                                <h3>31 octobre</h3>
+                                <h4>31 octobre</h4>
                                 <p>Soirée échange de friandises + déguisements exigés</p>
                             </div>
                             <div class="card">
                                 <div class="titre2">
-                                    <h2>Noël</h2>
+                                    <h3>Noël</h3>
                                 </div>
-                                <h3>24 décembre</h3>
+                                <h4>24 décembre</h4>
                                 <p>Soirée d'ambiance festive + père-noël</p>
                             </div>
                             <div class="card">
                                 <div class="titre2">
-                                    <h2>Nouvelle année</h2>
+                                    <h3>Nouvelle année</h3>
                                 </div>
-                                <h3>31 décembre</h3>
+                                <h4>31 décembre</h4>
                                 <p>Soirée festive + décompte jusqu'à minuit</p>
                             </div>
                             <div class="card">
                                 <div class="titre2">
-                                    <h2>Epiphanie</h2>
+                                    <h3>Epiphanie</h3>
                                 </div>
-                                <h3>6 janvier</h3>
+                                <h4>6 janvier</h4>
                                 <p>Galette des rois offerte pour chaque consommation de plus de 150€</p>
                             </div>
                             <div class="card">
                                 <div class="titre2">
-                                    <h2>Paques</h2>
+                                    <h3>Paques</h3>
                                 </div>
-                                <h3>19 avril</h3>
+                                <h4>19 avril</h4>
                                 <p>Chasse aux oeufs dans tout le restaurant</p>
                             </div>
                             <div class="card">
                                 <div class="titre2">
-                                    <h2>Saint Valentin</h2>
+                                    <h3>Saint Valentin</h3>
                                 </div>
-                                <h3>14 février</h3>
+                                <h4>14 février</h4>
                                 <p>Soirée à ambiance romantique + boisson spéciale</p>
                             </div>
                         </div>
@@ -154,7 +171,7 @@
 <script>
     let currentSlide = 0;
     const slider = document.querySelector('.slider');
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.plats');
     const totalSlides = cards.length;
     
     // Clone les cartes pour créer l'effet de boucle
